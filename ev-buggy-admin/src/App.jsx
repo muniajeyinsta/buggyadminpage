@@ -808,6 +808,7 @@ function AddUserPage() {
       setError('')
       const payload = {
         userId: form.userId.trim(),
+        user_id: form.userId.trim(),
         name: form.name.trim(),
         phone: form.phone.trim(),
         apartment_name: form.apartment_name.trim(),
@@ -868,35 +869,39 @@ function AddUserPage() {
             />
           </label>
           <label className="text-sm font-medium text-slate-700 md:col-span-2">
-            Apartment
+            Apartment *
             <input
+              required
               value={form.apartment_name}
               onChange={setValue('apartment_name')}
               className="mt-1 w-full rounded-xl border border-slate-300 px-3 py-3 outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-100"
             />
           </label>
           <label className="text-sm font-medium text-slate-700">
-            Tower
+            Tower *
             <input
+              required
               value={form.tower}
               onChange={setValue('tower')}
               className="mt-1 w-full rounded-xl border border-slate-300 px-3 py-3 outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-100"
             />
           </label>
           <label className="text-sm font-medium text-slate-700">
-            Floor
+            Floor *
             <input
+              required
               value={form.floor}
               onChange={setValue('floor')}
               className="mt-1 w-full rounded-xl border border-slate-300 px-3 py-3 outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-100"
             />
           </label>
           <label className="text-sm font-medium text-slate-700 md:col-span-2">
-            Flat Number
+            Flat Number *
             <input
+              required
               value={form.flat_number}
               onChange={setValue('flat_number')}
-              className="mt-1 w-full rounded-xl border border-slate-300 px-3 py-3"
+              className="mt-1 w-full rounded-xl border border-slate-300 px-3 py-3 outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-100"
             />
           </label>
         </div>
